@@ -1,0 +1,7 @@
+.activated {
+    background-color: rgb(52, 228, 52);
+}
+
+.nonActivated {
+    background-color: lightgray;
+}
