@@ -31,7 +31,7 @@ class Example extends Component {
 
 import React, { useState, useEffect } from 'react';
 
-function Example() {
+function Example(props) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -44,6 +44,7 @@ function Example() {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
+      <p>{props.children}</p>
     </div>
   );
 }

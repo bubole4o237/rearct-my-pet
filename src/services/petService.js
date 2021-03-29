@@ -27,3 +27,20 @@ export const getOne = (petId) => {
         .then(res => res.json())
         .catch(err => console.log(err));
 }
+
+export const create = (name, description, imageURL, category) => {
+    let pet = {
+        name,
+        description,
+        imageURL,
+        category
+    }
+
+    return fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pet)
+    });
+};
