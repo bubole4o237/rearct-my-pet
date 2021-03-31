@@ -6,7 +6,9 @@ import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Categories from './components/Categories/Categories';
 import PetDetails from './components/PetDetails/PetDetails';
+import EditPetDetails from './components/EditPetDetails/EditPetDetails'; 
 import CreatePet from './components/CreatePet/CreatePet';
+import DeletePet from './components/DeletePet/DeletePet';
 
 import './App.css';
 
@@ -21,8 +23,10 @@ function App() {
         <Route path='/home' component={Home} />
         <Route path='/' exact component={Categories} />
         <Route path='/categories/:category' component={Categories} />
-        <Route path='/pet/details/:petId' component={PetDetails} />
+        <Route path='/pet/details/:petId' exact component={PetDetails} />
+        <Route path='/pet/details/:petId/edit' component={EditPetDetails} />
         <Route path='/pet/create' component={CreatePet} />
+        <Route path='/pet/:petId/delete' component={DeletePet} />
       </Switch>
 
       <Footer />

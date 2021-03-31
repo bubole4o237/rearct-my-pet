@@ -39,7 +39,7 @@ class Categories extends Component {
 
     render() {
         // console.log(this.props);
-        console.log(this.state.pets);
+        // console.log(this.state.pets);
 
         return (
             <section className="dashboard">
@@ -52,11 +52,11 @@ class Categories extends Component {
                         <Pet
                             key={pet.id}
                             id={pet.id}
-                            name={pet.name}
+                            /* name={pet.name}
                             category={pet.category}
                             imageURL={pet.imageURL}
                             description={pet.description}
-                            likes={pet.likes}
+                            likes={pet.likes} */
 
                         />
                     )}
